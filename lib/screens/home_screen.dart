@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: StreamBuilder<List<ScanResult>>(
                   stream: flutterBlue.scanResults,
                   initialData: [],
-                  builder: (c, snapshot) => Column(
+                  builder: (c, snapshot) => ListView(
                     children: snapshot.data
                         .map(
                           (scanResult) => ScanResultTile(
